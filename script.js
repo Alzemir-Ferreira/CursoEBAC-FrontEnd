@@ -1,27 +1,17 @@
-const form = document.getElementById("form-add");
+$(document).ready(function () {
+  $("#adicionar").click(function (event) {
+    event.preventDefault();
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+    const tarefa = $("#tarefa").val();
 
-  const primeiro = parseFloat(document.getElementById("a").value);
-  const segundo = parseFloat(document.getElementById("b").value);
+    if (tarefa != "") {
+      $("#lista-tarefas").append("<li>" + tarefa + "</li>");
 
-  const mensagemMaior = `Correto! <b>${segundo}</b> é maior que <b>${primeiro}</b>.`;
-  const mensagemMenor = `Errado! <b>${segundo}</b> não é maior que <b>${primeiro}</b>.`;
-  const mensagemIgual = `Iguais! <b>${segundo}</b> é igual a <b>${primeiro}</b>.`;
+      $("#tarefa").val("");
+    }
+  });
 
-  const localMensagem = document.getElementById("mensagem");
-  
-  localMensagem.classList.remove("maior", "menor", "igual");
-
-  if (primeiro < segundo) {
-    localMensagem.innerHTML = mensagemMaior;
-    localMensagem.classList.add("maior");
-  } else if (primeiro > segundo) {
-    localMensagem.innerHTML = mensagemMenor;
-    localMensagem.classList.add("menor");
-  } else {
-    localMensagem.innerHTML = mensagemIgual;
-    localMensagem.classList.add("igual");
-  }
+  $(document).on("click", "li", function () {
+    $(this).toggleClass("completed");
+  });
 });
