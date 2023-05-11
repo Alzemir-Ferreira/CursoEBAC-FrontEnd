@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <form id="form-cadastro">
+    <h1>Formulário de Cadastro</h1>
+
+    <div>
+      <input type="text" id="nome_completo" name="nome_completo" required>
+      <label class="principal" for="nome_completo">Nome completo:</label>
+      <span class="material-symbols-outlined"> account_circle </span>
+    </div>
+
+    <div>
+      <input type="email" id="email" name="email" required>
+      <label class="principal" for="email">E-mail:</label>
+      <span class="material-symbols-outlined"> mail </span>
+    </div>
+
+    <div>
+      <input type="tel" id="telefone" name="telefone" required>
+      <label class="principal" for="telefone">Telefone:</label>
+      <span class="material-symbols-outlined"> call </span>
+    </div>
+
+    <div>
+      <input type="text" id="cpf" name="cpf" required>
+      <label class="principal" for="cpf">CPF:</label>
+      <span class="material-symbols-outlined"> badge </span>
+    </div>
+
+    <div>
+      <input type="text" id="endereco" name="endereco" required>
+      <label class="principal" for="endereco">Endereço completo:</label>
+      <span class="material-symbols-outlined"> home </span>
+    </div>
+
+    <div>
+      <input type="text" id="cep" name="cep" required>
+      <label class="principal" for="cep">CEP:</label>
+      <span class="material-symbols-outlined"> local_post_office </span>
+    </div>
+
+    <button type="submit">Enviar
+      <span class="material-symbols-outlined"> arrow_forward </span>
+    </button>
+
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="JS/jquery.mask.min.js"></script>
+  <script src="JS/jquery.validate.min.js"></script>
+  <script src="JS/messages_pt_BR.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
